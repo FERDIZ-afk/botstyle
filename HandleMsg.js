@@ -574,7 +574,7 @@ Menunggu video...`
              console.error(err.message)
              await aruga.sendFileFromUrl(from, errorurl2, 'error.png', '💔️ Maaf, Video tidak ditemukan')
              aruga.sendText(ownerNumber, 'Tiktok Error : ' + err)
-           })
+           }
             break
         case 'ytmp3':
             if (args.length == 0) return aruga.reply(from, `Untuk mendownload lagu dari youtube\nketik: ${prefix}ytmp3 [link_yt]`, id)
@@ -1069,7 +1069,7 @@ Menunggu video...`
             const { potensi, koordinat, lokasi, kedalaman, magnitude, waktu, map } = bmkg
             const hasil = `*${waktu}*\n📍 *Lokasi* : *${lokasi}*\n〽️ *Kedalaman* : *${kedalaman}*\n💢 *Magnitude* : *${magnitude}*\n🔘 *Potensi* : *${potensi}*\n📍 *Koordinat* : *${koordinat}*`
             aruga.sendFileFromUrl(from, map, 'shakemap.jpg', hasil, id)
-            })
+
             break
 		
 		//Fun Menu
